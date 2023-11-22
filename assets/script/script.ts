@@ -76,7 +76,7 @@ console.log(professionista1);
 console.log(
   `Il reddito annuo netto di ${professionista1.name} ${
     professionista1.surname
-  } ammounta a ${professionista1.getRedditoAnnuoNetto()}€`
+  } ammonta a ${professionista1.getRedditoAnnuoNetto()}€`
 );
 
 class Artigiano extends Tasse {
@@ -125,7 +125,7 @@ console.log(artigiano1);
 console.log(
   `Il reddito annuo netto di ${artigiano1.name} ${
     artigiano1.surname
-  } ammounta a ${artigiano1.getRedditoAnnuoNetto()}€`
+  } ammonta a ${artigiano1.getRedditoAnnuoNetto()}€`
 );
 
 class Commerciante extends Tasse {
@@ -182,5 +182,5 @@ console.log(commerciante1);
 console.log(
   `Il reddito annuo netto di ${commerciante1.name} ${
     commerciante1.surname
-  } ammounta a ${commerciante1.getRedditoAnnuoNetto()}€`
+  } ammonta a ${commerciante1.getRedditoAnnuoNetto()}€`
 );
