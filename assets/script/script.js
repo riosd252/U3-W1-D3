@@ -49,7 +49,7 @@ var professionista1 = new Professinista(0.22, 50000, 0, 0, 1, "David", "Rios");
 professionista1.getTasseInps();
 professionista1.getTasseIrpef();
 console.log(professionista1);
-console.log(professionista1.getRedditoAnnuoNetto());
+console.log("Il reddito annuo netto di ".concat(professionista1.name, " ").concat(professionista1.surname, " ammounta a ").concat(professionista1.getRedditoAnnuoNetto(), "\u20AC"));
 var Artigiano = /** @class */ (function (_super) {
     __extends(Artigiano, _super);
     function Artigiano(_codredd, _redditoAnnuoLordo, _tasseInps, _tasseIrpef, _id, _name, _surname) {
@@ -77,7 +77,7 @@ var artigiano1 = new Artigiano(0.22, 150000, 0, 0, 1, "Cosmin", "Petrea");
 artigiano1.getTasseInps();
 artigiano1.getTasseIrpef();
 console.log(artigiano1);
-console.log(artigiano1.getRedditoAnnuoNetto());
+console.log("Il reddito annuo netto di ".concat(artigiano1.name, " ").concat(artigiano1.surname, " ammounta a ").concat(artigiano1.getRedditoAnnuoNetto(), "\u20AC"));
 var Commerciante = /** @class */ (function (_super) {
     __extends(Commerciante, _super);
     function Commerciante(_codredd, _redditoAnnuoLordo, _tasseInps, _tasseIrpef, _id, _name, _surname) {
@@ -105,4 +105,4 @@ var commerciante1 = new Commerciante(0.22, 500000, 0, 0, 1, "Rosario", "Scilipot
 commerciante1.getTasseInps();
 commerciante1.getTasseIrpef();
 console.log(commerciante1);
-console.log(commerciante1.getRedditoAnnuoNetto());
+console.log("Il reddito annuo netto di ".concat(commerciante1.name, " ").concat(commerciante1.surname, " ammounta a ").concat(commerciante1.getRedditoAnnuoNetto(), "\u20AC"));

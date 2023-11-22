@@ -73,7 +73,11 @@ professionista1.getTasseInps();
 professionista1.getTasseIrpef();
 
 console.log(professionista1);
-console.log(professionista1.getRedditoAnnuoNetto());
+console.log(
+  `Il reddito annuo netto di ${professionista1.name} ${
+    professionista1.surname
+  } ammounta a ${professionista1.getRedditoAnnuoNetto()}€`
+);
 
 class Artigiano extends Tasse {
   id: number;
@@ -118,7 +122,11 @@ artigiano1.getTasseInps();
 artigiano1.getTasseIrpef();
 
 console.log(artigiano1);
-console.log(artigiano1.getRedditoAnnuoNetto());
+console.log(
+  `Il reddito annuo netto di ${artigiano1.name} ${
+    artigiano1.surname
+  } ammounta a ${artigiano1.getRedditoAnnuoNetto()}€`
+);
 
 class Commerciante extends Tasse {
   id: number;
@@ -171,4 +179,8 @@ commerciante1.getTasseInps();
 commerciante1.getTasseIrpef();
 
 console.log(commerciante1);
-console.log(commerciante1.getRedditoAnnuoNetto());
+console.log(
+  `Il reddito annuo netto di ${commerciante1.name} ${
+    commerciante1.surname
+  } ammounta a ${commerciante1.getRedditoAnnuoNetto()}€`
+);
