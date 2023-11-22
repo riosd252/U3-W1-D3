@@ -45,6 +45,64 @@ var Professinista = /** @class */ (function (_super) {
     };
     return Professinista;
 }(Tasse));
-var professionista1 = new Professinista(0.22, 100, 0, 0, 1, "David", "Rios");
+var professionista1 = new Professinista(0.22, 50000, 0, 0, 1, "David", "Rios");
 professionista1.getTasseInps();
+professionista1.getTasseIrpef();
 console.log(professionista1);
+console.log(professionista1.getRedditoAnnuoNetto());
+var Artigiano = /** @class */ (function (_super) {
+    __extends(Artigiano, _super);
+    function Artigiano(_codredd, _redditoAnnuoLordo, _tasseInps, _tasseIrpef, _id, _name, _surname) {
+        var _this = _super.call(this, _codredd, _redditoAnnuoLordo, _tasseInps, _tasseIrpef) || this;
+        _this.id = _id;
+        _this.name = _name;
+        _this.surname = _surname;
+        return _this;
+    }
+    Artigiano.prototype.getUtileTasse = function () {
+        return this.redditoAnnuoLordo - this.redditoAnnuoLordo * this.codredd;
+    };
+    Artigiano.prototype.getTasseInps = function () {
+        return (this.tasseInps = this.getUtileTasse() * 0.15);
+    };
+    Artigiano.prototype.getTasseIrpef = function () {
+        return (this.tasseIrpef = this.getUtileTasse() * 0.15);
+    };
+    Artigiano.prototype.getRedditoAnnuoNetto = function () {
+        return this.getUtileTasse() - this.tasseInps - this.tasseIrpef;
+    };
+    return Artigiano;
+}(Tasse));
+var artigiano1 = new Artigiano(0.22, 150000, 0, 0, 1, "Cosmin", "Petrea");
+artigiano1.getTasseInps();
+artigiano1.getTasseIrpef();
+console.log(artigiano1);
+console.log(artigiano1.getRedditoAnnuoNetto());
+var Commerciante = /** @class */ (function (_super) {
+    __extends(Commerciante, _super);
+    function Commerciante(_codredd, _redditoAnnuoLordo, _tasseInps, _tasseIrpef, _id, _name, _surname) {
+        var _this = _super.call(this, _codredd, _redditoAnnuoLordo, _tasseInps, _tasseIrpef) || this;
+        _this.id = _id;
+        _this.name = _name;
+        _this.surname = _surname;
+        return _this;
+    }
+    Commerciante.prototype.getUtileTasse = function () {
+        return this.redditoAnnuoLordo - this.redditoAnnuoLordo * this.codredd;
+    };
+    Commerciante.prototype.getTasseInps = function () {
+        return (this.tasseInps = this.getUtileTasse() * 0.35);
+    };
+    Commerciante.prototype.getTasseIrpef = function () {
+        return (this.tasseIrpef = this.getUtileTasse() * 0.15);
+    };
+    Commerciante.prototype.getRedditoAnnuoNetto = function () {
+        return this.getUtileTasse() - this.tasseInps - this.tasseIrpef;
+    };
+    return Commerciante;
+}(Tasse));
+var commerciante1 = new Commerciante(0.22, 500000, 0, 0, 1, "Rosario", "Scilipoti");
+commerciante1.getTasseInps();
+commerciante1.getTasseIrpef();
+console.log(commerciante1);
+console.log(commerciante1.getRedditoAnnuoNetto());
